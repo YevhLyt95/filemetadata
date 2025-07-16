@@ -1,42 +1,102 @@
-/****** Main Styling ******/
-
+/* 🌙 Темна тема */
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  color: #222;
-  background-color: #ECF0F1;
-  text-align: center;
-}
-
-.container {
+  background: radial-gradient(circle at top, #1f1f1f, #121212);
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
   padding: 0;
+}
+
+/* 🧊 Glass ефект */
+form {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 24px 30px;
+  width: 90%;
+  max-width: 460px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.9s ease forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+/* 🖼 Заголовок */
+h1 {
+  font-size: 2rem;
   margin-top: 40px;
+  color: #e0e0e0;
+  animation: fadeIn 0.6s ease forwards;
+  opacity: 0;
 }
 
-.footer {
-  margin-top: 60px;
+/* 📁 Поле для файлу */
+input[type="file"] {
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 1rem;
 }
 
-a {
-  color: #2574A9;
+/* 🔘 Кнопка */
+button {
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-input {
-  display: block;
-  position: relative;
-  margin: 10px auto;
+button:hover {
+  background-color: #0097a7;
 }
 
-input#button {
-  width: 230px;
+/* 📱 Мобільна адаптація */
+@media (max-width: 600px) {
+  form {
+    width: 95%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    width: 100%;
+  }
 }
 
-.view {
-  position:relative;
-  margin: auto;
+/* 🌀 Анімація */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+footer {
   margin-top: 40px;
-  border: 1px  solid  #aaa;
-  padding: 20px;
-  width: 60%;
-  min-width: 400px;
+  font-size: 0.9rem;
+  color: #999;
 }
