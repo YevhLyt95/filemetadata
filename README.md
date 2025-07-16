@@ -1,3 +1,11 @@
-# File Metadata Microservice
+A simple Node.js API that accepts file uploads and returns metadata.  
+Built as part of the FreeCodeCamp Back-End Certification Project.
 
-This is the boilerplate for the File Metadata Microservice project. Instructions for building your project can be found at https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/file-metadata-microservice
+## 🧰 Technologies Used
+
+- Node.js
+- Express
+- Multer (for handling file uploads)
+- HTML (form-based upload interface)
+- dotenv (environment config)
+
